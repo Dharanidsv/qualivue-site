@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Contact Preview</title>
+</head>
+<body class="bg-gray-950 text-white">
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="bg-gray-950 text-white py-20 px-6 relative overflow-hidden">
+
+  <!-- Right-side vertical ribbon -->
+  <div class="hidden md:flex flex-col items-center justify-center gap-2 
+              fixed right-6 top-1/2 -translate-y-1/2 z-50">
+    <div class="rotate-90 text-sm tracking-widest text-purple-400 font-semibold">
+      TALK TO QA EXPERT
+    </div>
+    <a href="#contact" 
+       class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-xs font-semibold">
+      CONTACT
+    </a>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
+
+    <!-- LEFT: CONTACT FORM -->
+    <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+
+      <form class="space-y-5">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+        <input type="email" placeholder="Email Address" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+        <input type="text" placeholder="Company (Optional)" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-gray-800 border border-gray-700"></textarea>
+
+        <button type="submit" 
+          class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold text-white">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE BLOCKS -->
+    <div class="flex flex-col gap-8">
+
+      <!-- WHY CONTACT US CARD -->
+      <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-bold mb-4 text-purple-400">Why Contact Us?</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>🛡️ 100% NDA & Secure Process</li>
+          <li>⚡ Fast onboarding (24–48 hrs)</li>
+          <li>🧪 Senior QA Experts Only</li>
+          <li>📈 Transparent pricing & timelines</li>
+        </ul>
+      </div>
+
+      <!-- SCHEDULE CALL CARD -->
+      <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="text-3xl">📅</div>
+          <h3 class="text-xl font-bold">Schedule a Call</h3>
+        </div>
+        <p class="text-gray-300 mb-4">
+          Fastest way to get timelines, pricing & expert guidance.
+        </p>
+
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+          class="w-full py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold">
+          Book Now
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</body>
+</html>
