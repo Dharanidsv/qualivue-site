@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Floating CTA Preview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float {
+    animation: floatUpDown 2.6s ease-in-out infinite;
+  }
+</style>
+</head>
+<body class="bg-black h-[120vh] flex items-center justify-center text-white">
+
+<h1 class="text-2xl font-bold text-gray-300">Floating CTA Preview</h1>
+
+<!-- Floating CTA Button -->
+<a href="#contact"
+   class="fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-full shadow-2xl text-sm md:text-base font-semibold transition-all duration-300 animate-float z-50">
+   Request a Quote
+</a>
+
+</body>
+</html>
