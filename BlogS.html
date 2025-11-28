@@ -1,67 +1,99 @@
-import React from "react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Section Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-black">
 
-export default function BlogSection() {
-  const posts = [
-    {
-      title: "Top 7 QA Pain Points & How to Fix Them",
-      desc: "A practical breakdown of common quality assurance challenges and actionable ways to resolve them.",
-      date: "Nov 2025",
-    },
-    {
-      title: "Why Automation Fails — And How to Make It Work",
-      desc: "Automation isn’t magic. Here’s how to plan, implement, and scale it without costly failures.",
-      date: "Oct 2025",
-    },
-    {
-      title: "Shift-Left Testing: What It Really Means for Your Team",
-      desc: "A beginner-friendly explanation of shift-left testing, CI/CD alignment, and early defect prevention.",
-      date: "Sep 2025",
-    },
-    {
-      title: "Choosing the Right Automation Framework",
-      desc: "Selenium vs. Playwright vs. Cypress — tradeoffs in stability, parallelism, and CI cost.",
-      date: "Aug 2025",
-    },
-    {
-      title: "API Contract Testing that Scales",
-      desc: "Pragmatic strategies for schema evolution, test data, and versioning.",
-      date: "Jul 2025",
-    },
-    {
-      title: "Performance Testing for Flash Sales",
-      desc: "Load models, soak tests, and capacity planning tactics for seasonal spikes.",
-      date: "Jun 2025",
-    },
-  ];
+  <section class="min-h-screen px-6 py-16 text-white">
+    <h2 
+      class="text-4xl font-bold text-center mb-12"
+      data-aos="fade-up"
+      data-aos-duration="600"
+    >
+      Blog & Thought Leadership
+      <p class="text-gray-300 mt-2 text-lg">
+        Insights, guides, and playbooks from our QA experts.
+      </p>
+    </h2>
 
-  return (
-    <div className="min-h-screen bg-black px-6 py-16 text-white">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12"
+    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up"
       >
-        Blog & Thought Leadership
-        <p class="text-gray-300 mt-2 text-lg">Insights, guides, and playbooks from our QA experts.</p>
-      </motion.h2>
-
-      <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {posts.map((post, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.2 }}
-            className="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
-          >
-            <h3 className="text-2xl font-semibold mb-3">{post.title}</h3>
-            <p className="text-zinc-300 mb-4">{post.desc}</p>
-            <p className="text-sm text-zinc-500">{post.date}</p>
-          </motion.div>
-        ))}
+        <h3 class="text-2xl font-semibold mb-3">Top 7 QA Pain Points & How to Fix Them</h3>
+        <p class="text-zinc-300 mb-4">
+          A practical breakdown of common quality assurance challenges and actionable ways to resolve them.
+        </p>
+        <p class="text-sm text-zinc-500">Nov 2025</p>
       </div>
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up" data-aos-delay="200"
+      >
+        <h3 class="text-2xl font-semibold mb-3">Why Automation Fails — And How to Make It Work</h3>
+        <p class="text-zinc-300 mb-4">
+          Automation isn’t magic. Here’s how to plan, implement, and scale it without costly failures.
+        </p>
+        <p class="text-sm text-zinc-500">Oct 2025</p>
+      </div>
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up" data-aos-delay="400"
+      >
+        <h3 class="text-2xl font-semibold mb-3">Shift-Left Testing: What It Really Means for Your Team</h3>
+        <p class="text-zinc-300 mb-4">
+          A beginner-friendly explanation of shift-left testing, CI/CD alignment, and early defect prevention.
+        </p>
+        <p class="text-sm text-zinc-500">Sep 2025</p>
+      </div>
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up"
+      >
+        <h3 class="text-2xl font-semibold mb-3">Choosing the Right Automation Framework</h3>
+        <p class="text-zinc-300 mb-4">
+          Selenium vs. Playwright vs. Cypress — tradeoffs in stability, parallelism, and CI cost.
+        </p>
+        <p class="text-sm text-zinc-500">Aug 2025</p>
+      </div>
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up" data-aos-delay="200"
+      >
+        <h3 class="text-2xl font-semibold mb-3">API Contract Testing that Scales</h3>
+        <p class="text-zinc-300 mb-4">
+          Pragmatic strategies for schema evolution, test data, and versioning.
+        </p>
+        <p class="text-sm text-zinc-500">Jul 2025</p>
+      </div>
+
+      <div 
+        class="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+        data-aos="fade-up" data-aos-delay="400"
+      >
+        <h3 class="text-2xl font-semibold mb-3">Performance Testing for Flash Sales</h3>
+        <p class="text-zinc-300 mb-4">
+          Load models, soak tests, and capacity planning tactics for seasonal spikes.
+        </p>
+        <p class="text-sm text-zinc-500">Jun 2025</p>
+      </div>
+
     </div>
-  );
-}
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
