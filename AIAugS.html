@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qualivue — AI‑Augmented Testing (Section Preview)</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#7c3aed;--muted:#9aa4b2;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,#071026 0%, #071b2b 60%);color:#e6eef8;line-height:1.4}
+    .container{max-width:1100px;margin:48px auto;padding:24px}
+
+    /* Section card */
+    .section{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:16px;padding:32px;box-shadow:0 8px 30px rgba(2,6,23,0.7);border:1px solid rgba(255,255,255,0.04)}
+
+    .header{display:flex;gap:20px;align-items:center}
+    .hero-ill{flex:0 0 180px;border-radius:12px;padding:12px;background:linear-gradient(135deg, rgba(124,58,237,0.12), rgba(3,105,161,0.06));display:flex;align-items:center;justify-content:center}
+    .hero-ill svg{width:150px;height:120px}
+    .heading{flex:1}
+    h2{margin:0;font-size:24px;letter-spacing:-0.3px}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+
+    /* Features grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(10,14,20,0.6));padding:16px;border-radius:12px;border:1px solid var(--glass);min-height:110px}
+    .icon{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(124,58,237,0.14), rgba(3,105,161,0.06));margin-right:10px}
+    .card h4{margin:6px 0 0;font-size:15px}
+    .card p{margin:8px 0 0;color:var(--muted);font-size:14px}
+
+    /* Benefits strip */
+    .benefits{display:flex;gap:12px;margin-top:20px}
+    .pill{background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* Process */
+    .process{display:flex;align-items:center;gap:18px;margin-top:22px}
+    .step{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);text-align:center}
+    .step .num{font-size:18px;font-weight:700;color:var(--accent)}
+    .step p{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+    /* Case study / CTA */
+    .split{display:flex;gap:16px;margin-top:22px}
+    .case{flex:1;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(3,7,18,0.5), rgba(3,7,18,0.2));border:1px solid rgba(255,255,255,0.03)}
+    .case h5{margin:0 0 6px}
+    .metric{font-size:28px;font-weight:800;color:#dbeafe}
+
+    .cta{flex:0 0 270px;padding:18px;border-radius:12px;background:linear-gradient(135deg,#0b1220, rgba(124,58,237,0.06));display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border:1px solid rgba(255,255,255,0.03)}
+    .cta p{color:var(--muted);margin:0 0 12px}
+    .btn{background:linear-gradient(90deg,var(--accent),#0ea5a4);padding:10px 14px;border-radius:10px;color:#041024;font-weight:700;border:none;cursor:pointer}
+    .ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px}
+
+    /* Responsive */
+    @media (max-width:920px){.grid{grid-template-columns:repeat(2,1fr)} .header{flex-direction:column;align-items:flex-start}.hero-ill{align-self:stretch;width:100%}.split{flex-direction:column}.cta{width:100%}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr} .benefits{flex-direction:column}}
+
+    /* small flourish */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="section" aria-labelledby="ai-augmented">
+      <div class="header">
+        
+
+        <div class="heading">
+          <h2 id="ai-augmented">AI‑Augmented Testing — Faster Releases, Fewer Surprises</h2>
+          <p class="lead">Automated test generation, self‑healing scripts, and AI‑driven analytics that reduce maintenance and surface the real risks before release.</p>
+          <div class="benefits" style="margin-top:12px">
+            <span class="pill">Auto Test Generation</span>
+            <span class="pill">Self‑Healing Scripts</span>
+            <span class="pill">Anomaly Detection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features grid -->
+      <div class="grid" style="margin-top:18px">
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <!-- simple svg -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><path d="M12 16v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><circle cx="12" cy="12" r="3" stroke="#fff" stroke-width="1.2" opacity="0.9"/></svg>
+            </div>
+            <div>
+              <h4>Automated Test Case Generation</h4>
+              <p class="muted">Model‑driven test generation that creates meaningful, prioritized cases from your app flows and telemetry.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M12 3v18" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Self‑Healing Test Scripts</h4>
+              <p class="muted">Tests adapt to UI/DOM changes automatically — reduce flaky failures and maintenance overhead.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M4 18h16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Anomaly & Regression Detection</h4>
+              <p class="muted">AI spots unusual patterns across runs and surfaces likely regressions before they reach production.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M7 6v12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Risk‑Based Prioritization</h4>
+              <p class="muted">Prioritize tests by risk, impact and likelihood — run high‑value checks first during CI cycles.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3 7h-6l3-7z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4>Cross‑Platform Coverage</h4>
+              <p class="muted">Desktop, web, mobile and API testing covered — same analytics and reports across platforms.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;align-items:center">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c3.9 0 7 3.1 7 7s-3.1 7-7 7-7-3.1-7-7 3.1-7 7-7z" stroke="#fff" stroke-width="1.2"/></svg>
+            </div>
+            <div>
+              <h4>CI/CD & Tooling Integrations</h4>
+              <p class="muted">Integrates with GitHub, GitLab, Jenkins and common pipelines for automated test runs and feedback loops.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="process" aria-hidden="false">
+        <div class="step">
+          <div class="num">1</div>
+          <strong>Share app & goals</strong>
+          <p class="muted">We analyze your app and existing tests.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <strong>Run AI‑augmented QA</strong>
+          <p class="muted">Generate, execute and analyze test runs with self‑healing logic.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <strong>Actionable insights</strong>
+          <p class="muted">Receive prioritized reports and recommended fixes for faster releases.</p>
+        </div>
+      </div>
+
+      <!-- Case study + CTA -->
+      <div class="split">
+        <div class="case">
+          <h5>Snapshot: E‑commerce Finisher</h5>
+          <p class="muted">Challenge: Frequent UI updates caused 40% of tests to break during releases.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div>
+              <div class="metric">✓ 70% fewer flaky failures</div>
+              <div class="muted" style="margin-top:6px">Automated targeted tests & self‑healing reduced maintenance.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="muted">Industry</div>
+              <strong style="display:block;margin-top:6px">E‑commerce</strong>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </section>
+  </div>
+</body>
+</html>
