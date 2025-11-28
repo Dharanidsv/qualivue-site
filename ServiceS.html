@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qualivue — Services</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6c5ce7; --glass: rgba(255,255,255,0.03);
+      --maxw:1100px; --radius:12px; --gap:18px; --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--bg),#071020); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw); margin:36px auto; padding:28px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center}
+    .hero h1{font-size:32px; margin:0 0 10px; line-height:1.05}
+    .hero p.lead{margin:0 0 16px; color:var(--muted)}
+    .cta-row{display:flex; gap:12px; align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),#5b8df2); border:none; padding:10px 16px; color:white; border-radius:10px; cursor:pointer; font-weight:600}
+    .btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+
+    /* Services grid */
+    .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gap); margin-top:26px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr} .services-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.services-grid{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg,var(--card),#071022); border-radius:var(--radius); padding:18px; box-shadow:0 6px 20px rgba(8,12,20,0.7); border:1px solid var(--glass); transition:transform .22s ease, box-shadow .22s ease}
+    .card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(8,12,20,0.6)}
+    .card .kicker{display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; background:var(--glass); color:var(--muted); margin-bottom:12px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 12px; color:var(--muted); font-size:14px}
+    .meta{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .badge{background:rgba(255,255,255,0.04); padding:6px 8px; border-radius:8px; font-size:12px; color:var(--muted)}
+    .icon{width:48px; height:48px; display:inline-grid; place-items:center; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); margin-right:12px}
+    .card .row{display:flex; gap:12px; align-items:flex-start}
+
+    .one-line{display:flex; justify-content:space-between; gap:12px; align-items:center}
+    .when{font-size:13px; color:var(--muted)}
+
+    /* process */
+    .process{margin-top:34px; display:flex; gap:14px; align-items:center; justify-content:space-between}
+    .step{flex:1; background:var(--glass-2); padding:12px; border-radius:12px; text-align:center}
+    .step h4{margin:6px 0 0}
+
+    /* testimonial row */
+    .trust-row{display:flex; gap:14px; align-items:center; margin-top:28px}
+    .logos{display:flex; gap:12px; align-items:center}
+    .logos img{height:28px; opacity:0.75}
+
+    /* modal */
+    .modal{position:fixed; inset:0; display:none; place-items:center; background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.85)); z-index:60}
+    .modal.open{display:grid}
+    .modal-card{background:#071022; padding:20px; border-radius:12px; width:min(820px,94%); box-shadow:0 18px 50px rgba(0,0,0,.7)}
+    .modal-card h3{margin-top:0}
+    .close{background:transparent; border:none; color:var(--muted); font-size:18px; cursor:pointer}
+
+    /* FAQ */
+    .faq{margin-top:28px}
+    .faq-item{background:var(--glass-2); padding:12px; border-radius:10px; margin-bottom:10px}
+    .faq q{font-weight:600}
+
+    /* floating CTA */
+    .floating{position:fixed; right:20px; bottom:20px; z-index:80}
+    .floating .btn{padding:12px 18px; border-radius:999px}
+
+    footer{margin:44px 0 120px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="kicker">Services • QA & Testing</div>
+        <h1>Comprehensive testing services that reduce risk and ship confidence</h1>
+        <p class="lead">Manual, Automation, Performance, API, Security and Mobile App testing — delivered with transparent reporting, CI/CD integration and measurable outcomes.</p>
+        <div class="cta-row">
+          
+          <button class="btn ghost" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})">Explore Services</button>
+        </div>
+
+        <div class="trust-row">
+          <div style="margin-top:14px; color:var(--muted)">Trusted by</div>
+          <div class="logos">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='32'><rect width='120' height='32' fill='%2308161b'/></svg>" alt="client logo"/>
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='28'><rect width='100' height='28' fill='%2308161b'/></svg>" alt="client logo"/>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:18px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03)">
+        <div style="display:flex; gap:12px; align-items:center">
+          <div style="flex:1">
+            <strong style="display:block">Quick Overview</strong>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">Turnkey testing teams or augment your engineering squads — we adapt to your workflow.</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-weight:700; font-size:20px">97%</div>
+            <div style="color:var(--muted); font-size:12px">Client satisfaction</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; display:grid; grid-template-columns:repeat(2,1fr); gap:8px">
+          <div class="badge">CI/CD Ready</div>
+          <div class="badge">Security First</div>
+          <div class="badge">24-hr Reporting</div>
+          <div class="badge">Device Lab</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services">
+      <div class="services-grid">
+
+        <!-- Manual Testing -->
+        <article class="card" data-service="manual">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18M3 12h18M3 17h18" stroke="white" stroke-opacity="0.9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">Manual Testing</div>
+              <h3>Human-led validation for UX & edge cases</h3>
+              <p>Explore usability, edge-case workflows and visual regressions that automation can miss.</p>
+              <div class="one-line">
+                <div class="when">Best when: pre-launch checks, complex UX, small batches</div>
+                <div><button class="btn ghost" onclick="openModal('manual')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Automation -->
+        <article class="card" data-service="automation">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="white" stroke-opacity="0.95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">Automation</div>
+              <h3>Scalable CI-integrated test suites</h3>
+              <p>Automate regression, E2E and smoke tests — integrate with Jenkins/GitHub Actions/GitLab for releases that don’t break.</p>
+              <div class="meta">
+                <span class="badge">Selenium / Playwright</span>
+                <span class="badge">CI/CD</span>
+                <span class="badge">Parallel runs</span>
+              </div>
+              <div style="margin-top:10px" class="one-line">
+                <div class="when">Best when: frequent deploys, large test surface</div>
+                <div><button class="btn ghost" onclick="openModal('automation')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Performance & Load -->
+        <article class="card" data-service="performance">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="white" stroke-opacity="0.95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">Performance & Load</div>
+              <h3>Find bottlenecks before your users do</h3>
+              <p>Load, stress and endurance testing with actionable tuning recommendations and capacity planning.</p>
+              <div class="meta" style="margin-top:8px">
+                <span class="badge">JMeter / k6</span>
+                <span class="badge">Scalability reports</span>
+              </div>
+              <div style="margin-top:10px" class="one-line">
+                <div class="when">Best when: flash sales, product launches, scaling</div>
+                <div><button class="btn ghost" onclick="openModal('performance')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- API Testing -->
+        <article class="card" data-service="api">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="white" stroke-opacity="0.95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">API Testing</div>
+              <h3>Secure, reliable integrations</h3>
+              <p>Contract tests, schema validation, and end-to-end API workflows that keep integrations dependable.</p>
+              <div class="meta" style="margin-top:8px">
+                <span class="badge">Postman / Newman</span>
+                <span class="badge">Contract tests</span>
+              </div>
+              <div style="margin-top:10px" class="one-line">
+                <div class="when">Best when: microservices, third-party integrations</div>
+                <div><button class="btn ghost" onclick="openModal('api')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Security Testing -->
+        <article class="card" data-service="security">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l6 4v6c0 5-3 9-6 10-3-1-6-5-6-10V6l6-4z" stroke="white" stroke-opacity="0.95" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">Security</div>
+              <h3>App & API security assessments</h3>
+              <p>OWASP-based scans, penetration testing, and prioritized remediation guidance to reduce attack surface.</p>
+              <div class="meta" style="margin-top:8px">
+                <span class="badge">OWASP Top 10</span>
+                <span class="badge">Pen testing</span>
+              </div>
+              <div style="margin-top:10px" class="one-line">
+                <div class="when">Best when: compliance, public launch, regulatory needs</div>
+                <div><button class="btn ghost" onclick="openModal('security')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mobile App Testing -->
+        <article class="card" data-service="mobile">
+          <div class="row">
+            <div class="icon"> 
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="2" stroke="white" stroke-opacity="0.95" stroke-width="1.4"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="kicker">Mobile App Testing</div>
+              <h3>Real device testing across OS & carriers</h3>
+              <p>Functional, compatibility and installation tests on real devices and cloud device farms.</p>
+              <div class="meta" style="margin-top:8px">
+                <span class="badge">iOS / Android</span>
+                <span class="badge">Device Lab</span>
+              </div>
+              <div style="margin-top:10px" class="one-line">
+                <div class="when">Best when: global user base, device fragmentation</div>
+                <div><button class="btn ghost" onclick="openModal('mobile')">Learn more</button></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Process visual -->
+      <div class="process">
+        <div class="step"><strong>Plan</strong><h4>Scope & test strategy</h4></div>
+        <div class="step"><strong>Create</strong><h4>Test cases & automation</h4></div>
+        <div class="step"><strong>Execute</strong><h4>Runs & verification</h4></div>
+        <div class="step"><strong>Report</strong><h4>Actionable dashboards</h4></div>
+        <div class="step"><strong>Improve</strong><h4>CI & continuous checks</h4></div>
+      </div>
+
+      <!-- CTA strip & small testimonials--> 
+      <div style="display:flex; gap:18px; margin-top:22px; align-items:center; justify-content:space-between">
+        <div style="flex:1">
+          <h3 style="margin:0">Ready to reduce risk on your next release?</h3>
+          <p style="margin:6px 0 0; color:var(--muted)">Get a fast readiness assessment or a tailored engagement plan.</p>
+        </div>
+        <div>
+          <button class="btn" onclick="openModal('contact')">Get assessment</button>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item"><q>How long does a full test cycle take?</q><p style="margin:8px 0 0; color:var(--muted)">Typical cycles range from 1-4 weeks depending on scope; automation builds reduce long-term cycle time significantly.</p></div>
+        <div class="faq-item"><q>Do you integrate with our CI?</q><p style="margin:8px 0 0; color:var(--muted)">Yes — we support GitHub Actions, Jenkins, GitLab pipelines and custom setups.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; align-items:center">
+        <div></div>
+        <div style="color:var(--muted)"></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal templates -->
+  <div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start">
+        <h3 id="m-title">Service details</h3>
+        <button class="close" onclick="closeModal()">✕</button>
+      </div>
+      <div id="m-body" style="margin-top:10px; color:var(--muted)"></div>
+      <div style="margin-top:16px; display:flex; gap:8px; justify-content:flex-end">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const details = {
+      manual: {
+        title: 'Manual Testing — Human‑led validation',
+        body: `<ul><li>Exploratory & usability testing</li><li>Cross‑browser & device checks</li><li>Visual regression reporting & reproduction steps</li></ul>`
+      },
+      automation: {
+        title: 'Automation — CI‑integrated suites',
+        body: `<ul><li>End‑to‑end & regression automation</li><li>Playwright / Selenium frameworks</li><li>Parallel cloud runs & flaky test reduction</li></ul>`
+      },
+      performance: {
+        title: 'Performance & Load — Scalability testing',
+        body: `<ul><li>Load, stress & endurance tests</li><li>Detailed bottleneck diagnostics</li><li>Capacity planning & tuning recommendations</li></ul>`
+      },
+      api: {
+        title: 'API Testing — Reliable integrations',
+        body: `<ul><li>Contract & schema validation</li><li>End‑to‑end API workflow tests</li><li>Automation with Postman / Newman</li></ul>`
+      },
+      security: {
+        title: 'Security — Pen test & OWASP checks',
+        body: `<ul><li>OWASP Top 10 scanning</li><li>Penetration testing & prioritized fixes</li><li>Compliance & regulatory reporting</li></ul>`
+      },
+      mobile: {
+        title: 'Mobile App Testing — Real device coverage',
+        body: `<ul><li>Functional & compatibility tests</li><li>Installation & upgrade testing</li><li>Cloud device farms & local device lab</li></ul>`
+      },
+      contact: {
+        title: '',
+        body: `<p>Tell us a bit about your project and timeline — we’ll return a tailored plan within one business day.</p><form onsubmit="event.preventDefault(); alert('Thanks — we\'ll reach out shortly'); closeModal();" style="margin-top:10px"><label style="display:block; font-weight:600; margin-bottom:6px">Email</label><input required type='email' placeholder='you@company.com' style='width:100%; padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); margin-bottom:8px'/><label style='display:block; font-weight:600; margin-bottom:6px'>Short brief</label><textarea required placeholder='Short project description' style='width:100%; min-height:80px; padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.04)'></textarea><div style='margin-top:8px; display:flex; gap:8px; justify-content:flex-end'><button class='btn ghost' onclick='closeModal()' type='button'>Cancel</button><button class='btn' type='submit'>Send</button></div></form>`
+      }
+    }
+
+    function openModal(key){
+      const modal = document.getElementById('modal');
+      const title = document.getElementById('m-title');
+      const body = document.getElementById('m-body');
+      const data = details[key] || {title:'Details', body:'<p>Information coming soon.</p>'};
+      title.innerText = data.title;
+      body.innerHTML = data.body;
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+    function closeModal(){
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow='auto';
+    }
+
+    // keyboard close
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); })
+  </script>
+</body>
+</html>
