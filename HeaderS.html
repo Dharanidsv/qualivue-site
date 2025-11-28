@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qualivue Header Preview</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7faff;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      padding: 12px 50px;
+      background: #000000;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #1fa2ff, #12d8fa, #06b3e8);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Nav */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 28px; /* added spacing between items */
+}
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #00c6ff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Contact CTA */
+    .cta {
+      background: linear-gradient(90deg, #00c6ff, #0094ff);
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white !important;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 150, 255, 0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Page Spacer */
+    .spacer {
+      height: 120px;
+    }
+
+    .content-preview {
+      padding: 40px;
+      font-size: 20px;
+      text-align: center;
+      color: #333;
+    }
+    /* Premium subtle glow for Option 1 */
+  header {
+    box-shadow: 0 0 22px rgba(255,255,255,0.12);
+  }
+  .logo span {
+    text-shadow: 0 0 8px rgba(255,255,255,0.25);
+  }
+  .
+  /* Recreated Logo (Option 2) */
+  .logo-frame {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(180deg, #27f0ff, #1c56ff) 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6px;
+  }
+  .logo-q {
+    font-size: 22px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #27f0ff, #1c56ff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .logo-text {
+    font-size: 26px;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #27f0ff, #1c56ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+  }
+  .favicon-space {
+    width: 48px; /* space reserved for favicon */
+    height: 48px;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="favicon-space"></div>
+  <nav class="nav" style="margin-left:auto;">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testing">AI Testing</a>
+    <a href="#cases">Case Studies</a>
+    <a href="#blog">Blog</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="spacer"></div>
+
+<div class="content-preview">
+  <h2>Header Preview Loaded Successfully</h2>
+  <p>This area is only for demonstration so you can see the fixed header in action.</p>
+</div>
+
+<script>
+  const header = document.getElementById("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) header.classList.add("scrolled");
+    else header.classList.remove("scrolled");
+  });
+</script>
+
+</body>
+</html>
