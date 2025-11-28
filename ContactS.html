@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://cdn.tailwindcss.com"></script>
-<title>Contact Preview</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact Preview</title>
 </head>
-<body class="bg-gray-950 text-white">
+<body class="bg-[#050B26] text-white">
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="bg-gray-950 text-white py-20 px-6 relative overflow-hidden">
+<section id="contact" class="min-h-screen py-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
-  <!-- Right-side vertical ribbon -->
-  <div class="hidden md:flex flex-col items-center justify-center gap-2 
-              fixed right-6 top-1/2 -translate-y-1/2 z-50">
-    <div class="rotate-90 text-sm tracking-widest text-purple-400 font-semibold">
-      TALK TO QA EXPERT
+    <!-- LEFT SIDE -->
+    <div>
+      <div class="bg-[#0b1437] p-6 rounded-2xl mb-6">
+        <h2 class="text-3xl font-semibold">Let’s talk QA & Testing</h2>
+        <p class="text-gray-400 mt-1">Tell us about your project — we reply within 1 business day.</p>
+      </div>
+
+      <div class="bg-[#0b1437] p-6 rounded-2xl">
+        <form class="space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="Your name">
+            <input type="email" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="hello@company.com">
+          </div>
+
+          <input type="text" class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" placeholder="Company or product name (optional)">
+
+          <select class="w-full bg-[#0f1b44] rounded-xl px-4 py-3">
+            <option>General / Pricing</option>
+            <option>Automation Testing</option>
+            <option>Manual Testing</option>
+            <option>Performance Testing</option>
+          </select>
+
+          <textarea class="w-full bg-[#0f1b44] rounded-xl px-4 py-3" rows="4" placeholder="Tell us about your project"></textarea>
+
+          <button class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl font-semibold w-full">Submit</button>
+        </form>
+      </div>
     </div>
-    <a href="#contact" 
-       class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-xs font-semibold">
-      CONTACT
-    </a>
-  </div>
 
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-start">
+    <!-- RIGHT SIDE -->
+    <div class="space-y-6">
 
-    <!-- LEFT: CONTACT FORM -->
-    <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
-      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <div class="bg-[#0b1437] p-6 rounded-2xl">
+        <div class="flex items-center gap-4">
+          <div class="bg-indigo-600 p-3 rounded-xl">💬</div>
+          <div>
+            <h3 class="font-semibold text-lg">Talk to a QA Expert</h3>
+            <p class="text-gray-400 text-sm">Get timelines, pricing & roadmap before you start.</p>
+          </div>
+        </div>
+      </div>
 
-      <form class="space-y-5">
-        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-        <input type="email" placeholder="Email Address" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-        <input type="text" placeholder="Company (Optional)" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
-        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-gray-800 border border-gray-700"></textarea>
-
-        <button type="submit" 
-          class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold text-white">
-          Send Message
-        </button>
-      </form>
-    </div>
-
-    <!-- RIGHT SIDE BLOCKS -->
-    <div class="flex flex-col gap-8">
-
-      <!-- WHY CONTACT US CARD -->
-      <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-bold mb-4 text-purple-400">Why Contact Us?</h3>
-        <ul class="space-y-3 text-gray-300">
-          <li>🛡️ 100% NDA & Secure Process</li>
+      <div class="bg-[#0b1437] p-6 rounded-2xl">
+        <h3 class="font-semibold text-lg mb-3">Why Contact Us?</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>🔒 100% NDA & secure QA process</li>
           <li>⚡ Fast onboarding (24–48 hrs)</li>
-          <li>🧪 Senior QA Experts Only</li>
-          <li>📈 Transparent pricing & timelines</li>
+          <li>👨‍💻 Senior QA engineers only</li>
+          <li>📊 Transparent pricing & timelines</li>
         </ul>
       </div>
 
-      <!-- SCHEDULE CALL CARD -->
-      <div class="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl shadow-lg">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="text-3xl">📅</div>
-          <h3 class="text-xl font-bold">Schedule a Call</h3>
+      <div class="bg-[#0b1437] p-6 rounded-2xl">
+        <div class="flex items-center gap-4">
+          <div class="bg-pink-600 p-3 rounded-xl">📅</div>
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">Book a quick call</h3>
+            <p class="text-gray-400 text-sm">Fastest way to get timelines, pricing & roadmap.</p>
+          </div>
+          <button class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-sm font-semibold">Book Now</button>
         </div>
-        <p class="text-gray-300 mb-4">
-          Fastest way to get timelines, pricing & expert guidance.
-        </p>
-
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-          class="w-full py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold">
-          Book Now
-        </button>
       </div>
 
     </div>
 
   </div>
-
 </section>
+
 </body>
 </html>
