@@ -1,0 +1,67 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function BlogSection() {
+  const posts = [
+    {
+      title: "Top 7 QA Pain Points & How to Fix Them",
+      desc: "A practical breakdown of common quality assurance challenges and actionable ways to resolve them.",
+      date: "Nov 2025",
+    },
+    {
+      title: "Why Automation Fails — And How to Make It Work",
+      desc: "Automation isn’t magic. Here’s how to plan, implement, and scale it without costly failures.",
+      date: "Oct 2025",
+    },
+    {
+      title: "Shift-Left Testing: What It Really Means for Your Team",
+      desc: "A beginner-friendly explanation of shift-left testing, CI/CD alignment, and early defect prevention.",
+      date: "Sep 2025",
+    },
+    {
+      title: "Choosing the Right Automation Framework",
+      desc: "Selenium vs. Playwright vs. Cypress — tradeoffs in stability, parallelism, and CI cost.",
+      date: "Aug 2025",
+    },
+    {
+      title: "API Contract Testing that Scales",
+      desc: "Pragmatic strategies for schema evolution, test data, and versioning.",
+      date: "Jul 2025",
+    },
+    {
+      title: "Performance Testing for Flash Sales",
+      desc: "Load models, soak tests, and capacity planning tactics for seasonal spikes.",
+      date: "Jun 2025",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black px-6 py-16 text-white">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Blog & Thought Leadership
+        <p class="text-gray-300 mt-2 text-lg">Insights, guides, and playbooks from our QA experts.</p>
+      </motion.h2>
+
+      <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {posts.map((post, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.2 }}
+            className="bg-zinc-900 p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+          >
+            <h3 className="text-2xl font-semibold mb-3">{post.title}</h3>
+            <p className="text-zinc-300 mb-4">{post.desc}</p>
+            <p className="text-sm text-zinc-500">{post.date}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
