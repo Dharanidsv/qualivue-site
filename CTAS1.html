@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Primary CTA Preview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  .animate-fadeInUp.delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animate-fadeInUp.delay-300 {
+    animation-delay: 0.3s;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body class="bg-black">
+
+<!-- Primary CTA Section -->
+<section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4 animate-fadeInUp">
+      Ready to Improve Your Testing Efficiency?
+    </h2>
+
+    <p class="text-lg mb-8 text-purple-100 animate-fadeInUp delay-200">
+      Get a fast, free assessment of your QA needs.
+    </p>
+
+    <a
+      href="#contact"
+      class="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl shadow-xl hover:scale-110 transition-transform duration-300 animate-fadeInUp delay-300"
+    >
+      Request a Quote
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
